@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "HHMYC Design Catalogue",
+      "hasCanvas": false,
+      "bodyTextLen": 372,
+      "bodyTextHash": "4c576a08ba7ad35763d89fb1b8caf3f42ba843956913643c80ab4ea342614efb",
+      "bodyTextPrefix": "HHMYC DESIGN CATALOGUE مركز الشيخ مشعل الأحمد الجابر الصباح للشب",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "HHMYC Design Catalogue",
+      "hasCanvas": false,
+      "bodyTextLen": 314,
+      "bodyTextHash": "f0f5bbf0a7d3a507210ee2ac7a3dab1753909bee7d02465e38216ad5dd7b1f33",
+      "bodyTextPrefix": "مركز الشيخ مشعل الأحمد الجابر الصباح للشباب والتكامل السيادي الو",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}

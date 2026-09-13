@@ -1,0 +1,202 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cinzel", "Times New Roman", ui-serif, Georgia, serif;
+  --font-sans: "Outfit", "IBM Plex Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+  --font-arabic: "IBM Plex Sans Arabic", "Outfit", ui-sans-serif, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --color-bg: #070708;
+  --color-bg-elevated: #0e0e10;
+  --color-surface: #141416;
+  --color-surface-2: #1c1c1f;
+  --color-fg: #eceae4;
+  --color-muted: #8f8c85;
+  --color-dim: #5e5c57;
+  --color-line: #2c2b28;
+  --color-line-strong: #3d3c38;
+  --color-accent: #c5c0b5;
+  --color-accent-2: #e4dfd4;
+  --color-navy: #243e63;
+  --color-ok: #7dba94;
+  --color-open: #7e9ec4;
+  --color-warn: #c4a574;
+  --color-rej: #c47b7b;
+  --color-zone-steel: #3d4450;
+  --color-zone-roof: #5b6574;
+  --color-zone-bipv: #1e3a5f;
+  --color-zone-marine: #6d7b8a;
+  --color-zone-facade: #8a9098;
+  --color-zone-cool: #3a6a88;
+  --color-zone-data: #2f5a4a;
+  --color-zone-util: #4a5560;
+  --color-zone-found: #3a3a42;
+  --color-zone-sust: #3d5c48;
+  --color-zone-orn: #8a7a5c;
+
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius: 6px;
+  --radius-lg: 10px;
+  --radius-xl: 16px;
+
+  --text-micro: 0.625rem;
+  --text-micro--line-height: 1.4;
+  --text-kicker: 0.6875rem;
+  --text-kicker--line-height: 1.4;
+  --text-caption: 0.75rem;
+  --text-caption--line-height: 1.45;
+  --text-body: 0.9375rem;
+  --text-body--line-height: 1.55;
+  --text-lede: 1.0625rem;
+  --text-lede--line-height: 1.5;
+  --text-title: clamp(1.35rem, 1.1rem + 1.2vw, 2rem);
+  --text-title--line-height: 1.15;
+  --text-display: clamp(1.75rem, 1.1rem + 2.4vw, 3.25rem);
+  --text-display--line-height: 1.05;
+  --text-hero: clamp(2.6rem, 1.2rem + 6.5vw, 6.75rem);
+  --text-hero--line-height: 0.92;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-accent) 35%, transparent);
+    color: var(--color-fg);
+  }
+}
+
+@layer utilities {
+  .hairline {
+    background: color-mix(in oklab, var(--color-accent) 38%, transparent);
+  }
+
+  .panel {
+    background: color-mix(in oklab, var(--color-surface) 88%, transparent);
+    border: 1px solid var(--color-line);
+  }
+
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slide-pane,
+  .stagger-in,
+  .stagger-in > * {
+    animation: none !important;
+    transition: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.stagger-in > * {
+  animation: rise-in 520ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.stagger-in > *:nth-child(1) {
+  animation-delay: 40ms;
+}
+.stagger-in > *:nth-child(2) {
+  animation-delay: 110ms;
+}
+.stagger-in > *:nth-child(3) {
+  animation-delay: 180ms;
+}
+.stagger-in > *:nth-child(4) {
+  animation-delay: 250ms;
+}
+.stagger-in > *:nth-child(5) {
+  animation-delay: 320ms;
+}
+.stagger-in > *:nth-child(6) {
+  animation-delay: 390ms;
+}
+.stagger-in > *:nth-child(7) {
+  animation-delay: 460ms;
+}
+.stagger-in > *:nth-child(8) {
+  animation-delay: 530ms;
+}
+.stagger-in > *:nth-child(9) {
+  animation-delay: 600ms;
+}
+.stagger-in > *:nth-child(10) {
+  animation-delay: 670ms;
+}
+
+.slide-pane[data-dir="next"] {
+  animation: slide-next 380ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.slide-pane[data-dir="prev"] {
+  animation: slide-prev 380ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes slide-next {
+  from {
+    opacity: 0;
+    transform: translateX(28px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+@keyframes slide-prev {
+  from {
+    opacity: 0;
+    transform: translateX(-28px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
