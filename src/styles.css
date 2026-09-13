@@ -74,6 +74,40 @@
     font-family: var(--font-sans);
   }
 
+  html.lang-ar body {
+    font-family: var(--font-arabic);
+  }
+
+  html.lang-ar .font-display {
+    font-family: var(--font-arabic);
+  }
+
+  .font-latin {
+    font-family: var(--font-display) !important;
+  }
+
+  .cover-veil {
+    background: linear-gradient(
+      to right,
+      var(--color-bg) 0%,
+      color-mix(in oklab, var(--color-bg) 82%, transparent) 42%,
+      color-mix(in oklab, var(--color-bg) 16%, transparent) 100%
+    );
+  }
+
+  html.lang-ar .cover-veil {
+    background: linear-gradient(
+      to left,
+      var(--color-bg) 0%,
+      color-mix(in oklab, var(--color-bg) 82%, transparent) 42%,
+      color-mix(in oklab, var(--color-bg) 16%, transparent) 100%
+    );
+  }
+
+  html.lang-ar .cover-photo {
+    object-position: 28% center;
+  }
+
   h1,
   h2,
   h3 {
@@ -108,6 +142,21 @@
   .tabular {
     font-variant-numeric: tabular-nums;
   }
+}
+
+html.pdf-export header,
+html.pdf-export nav {
+  display: none !important;
+}
+
+html.pdf-export .slide-pane,
+html.pdf-export .stagger-in,
+html.pdf-export .stagger-in > * {
+  animation: none !important;
+  transition: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 @media (prefers-reduced-motion: reduce) {

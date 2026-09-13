@@ -1,4 +1,5 @@
 import { CLOCKWISE_FROM_SOUTH, UNITS } from "@/lib/catalogue-data";
+import { UI, useLocale } from "@/lib/locale";
 import { cn } from "@/lib/utils";
 
 type Props = {
@@ -40,12 +41,13 @@ function labelPoint(i: number) {
 }
 
 export function RingPlan({ active = null, onSelect, showLabels = true, className }: Props) {
+  const { isAr, t } = useLocale();
   return (
     <svg
       viewBox="0 0 400 400"
       className={cn("h-full w-full", className)}
       role={onSelect ? "group" : "img"}
-      aria-label="Ten-unit ring plan"
+      aria-label={t("Ten-unit ring plan", "مخطط الحلقة ذات العشر وحدات")}
     >
       <circle
         cx="200"
@@ -72,9 +74,9 @@ export function RingPlan({ active = null, onSelect, showLabels = true, className
         textAnchor="middle"
         className="fill-muted"
         fontSize="8"
-        fontFamily="Outfit, sans-serif"
+        fontFamily={isAr ? "IBM Plex Sans Arabic, sans-serif" : "Outfit, sans-serif"}
       >
-        OASIS
+        {t(UI.oasis.en, UI.oasis.ar)}
       </text>
       <text
         x="200"
@@ -123,9 +125,9 @@ export function RingPlan({ active = null, onSelect, showLabels = true, className
                 dominantBaseline="middle"
                 className={cn(isOn ? "fill-accent-2" : "fill-muted")}
                 fontSize="6.5"
-                fontFamily="Outfit, sans-serif"
+                fontFamily={isAr ? "IBM Plex Sans Arabic, sans-serif" : "Outfit, sans-serif"}
               >
-                {UNITS[n - 1].name.split(" & ")[0]}
+                {isAr ? UNITS[n - 1].nameAr : UNITS[n - 1].name.split(" & ")[0]}
               </text>
             ) : null}
           </g>
@@ -138,9 +140,9 @@ export function RingPlan({ active = null, onSelect, showLabels = true, className
         textAnchor="middle"
         className="fill-dim"
         fontSize="7"
-        fontFamily="Outfit, sans-serif"
+        fontFamily={isAr ? "IBM Plex Sans Arabic, sans-serif" : "Outfit, sans-serif"}
       >
-        SOUTH ENTRY · Ø 159.520 m
+        {t(UI.southEntry.en, UI.southEntry.ar)} · Ø 159.520 m
       </text>
       <polygon points="200,248 196,238 204,238" className="fill-accent/70" />
     </svg>

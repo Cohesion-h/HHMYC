@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Outfit:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 1200px; height: 630px; overflow: hidden; background: #050506; }
+    .stage { position: relative; width: 1200px; height: 630px; }
+    .stage img.bg {
+      position: absolute; inset: 0; width: 1200px; height: 630px;
+      object-fit: cover; object-position: 55% 70%;
+    }
+    .veil {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(5,5,6,0.55) 0%, rgba(5,5,6,0.12) 42%, rgba(5,5,6,0.0) 62%);
+    }
+    .lockup {
+      position: absolute;
+      left: 50%;
+      top: 168px;
+      transform: translateX(-50%);
+      width: 720px;
+      text-align: center;
+      color: #eceae4;
+    }
+    .mark { width: 64px; height: 64px; margin: 0 auto 18px; color: #c5c0b5; }
+    h1 {
+      font-family: Cinzel, serif;
+      font-weight: 500;
+      font-size: 92px;
+      letter-spacing: 0.18em;
+      line-height: 0.95;
+      color: #eceae4;
+    }
+    .sub {
+      margin-top: 10px;
+      font-family: Outfit, sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      letter-spacing: 0.42em;
+      text-transform: uppercase;
+      color: #c5c0b5;
+    }
+    .rule {
+      width: 72px; height: 1px; margin: 18px auto 0;
+      background: rgba(197,192,181,0.55);
+    }
+    .tag {
+      margin-top: 14px;
+      font-family: Cinzel, serif;
+      font-weight: 500;
+      font-size: 15px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #e4dfd4;
+    }
+    .meta {
+      margin-top: 10px;
+      font-family: Outfit, sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #8f8c85;
+    }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <img class="bg" src="./og-scene.jpg" alt="" />
+    <div class="veil"></div>
+    <div class="lockup">
+      <svg class="mark" viewBox="0 0 200 200" fill="none">
+        <g transform="translate(100 100)" stroke="currentColor" stroke-linejoin="round">
+          <path d="M 0 -41 C 7 -50 24 -68 22.5 -83 C 20.5 -92 9 -95.5 0 -95.5 C -9 -95.5 -20.5 -92 -22.5 -83 C -24 -68 -7 -50 0 -41 Z" transform="rotate(0)" stroke-width="1.4"/>
+          <path d="M 0 -41 C 7 -50 24 -68 22.5 -83 C 20.5 -92 9 -95.5 0 -95.5 C -9 -95.5 -20.5 -92 -22.5 -83 C -24 -68 -7 -50 0 -41 Z" transform="rotate(36)" stroke-width="1.4"/>
+          <path d="M 0 -41 C 7 -50 24 -68 22.5 -83 C 20.5 -92 9 -95.5 0 -95.5 C -9 -95.5 -20.5 -92 -22.5 -83 C -24 -68 -7 -50 0 -41 Z" transform="rotate(72)" stroke-width="1.4"/>
+          <path d="M 0 -41 C 7 -50 24 -68 22.5 -83 C 20.5 -92 9 -95.5 0 -95.5 C -9 -95.5 -20.5 -92 -22.5 -83 C -24 -68 -7 -50 0 -41 Z" transform="rotate(108)" stroke-width="1.4"/>
+          <path d="M 0 -41 C 7 -50 24 -68 22.5 -83 C 20.5 -92 9 -95.5 0 -95.5 C -9 -95.5 -20.5 -92 -22.5 -83 C -24 -68 -7 -50 0 -41 Z" transform="rotate(144)" stroke-width="1.4"/>
+          <path d="M 0 -41 C 7 -50 24 -68 22.5 -83 C 20.5 -92 9 -95.5 0 -95.5 C -9 -95.5 -20.5 -92 -22.5 -83 C -24 -68 -7 -50 0 -41 Z" transform="rotate(180)" stroke-width="1.4"/>
+          <path d="M 0 -41 C 7 -50 24 -68 22.5 -83 C 20.5 -92 9 -95.5 0 -95.5 C -9 -95.5 -20.5 -92 -22.5 -83 C -24 -68 -7 -50 0 -41 Z" transform="rotate(216)" stroke-width="1.4"/>
+          <path d="M 0 -41 C 7 -50 24 -68 22.5 -83 C 20.5 -92 9 -95.5 0 -95.5 C -9 -95.5 -20.5 -92 -22.5 -83 C -24 -68 -7 -50 0 -41 Z" transform="rotate(252)" stroke-width="1.4"/>
+          <path d="M 0 -41 C 7 -50 24 -68 22.5 -83 C 20.5 -92 9 -95.5 0 -95.5 C -9 -95.5 -20.5 -92 -22.5 -83 C -24 -68 -7 -50 0 -41 Z" transform="rotate(288)" stroke-width="1.4"/>
+          <path d="M 0 -41 C 7 -50 24 -68 22.5 -83 C 20.5 -92 9 -95.5 0 -95.5 C -9 -95.5 -20.5 -92 -22.5 -83 C -24 -68 -7 -50 0 -41 Z" transform="rotate(324)" stroke-width="1.4"/>
+        </g>
+      </svg>
+      <h1>HHMYC</h1>
+      <p class="sub">Design Catalogue</p>
+      <div class="rule"></div>
+      <p class="tag">A Pledge and a Promise for the Future of Kuwait</p>
+      <p class="meta">Rev 1.0 · September 2026</p>
+    </div>
+  </div>
+</body>
+</html>
